@@ -3,7 +3,7 @@
  *
  * Return: Always 0 (Success)
  */
-#include <stddio.h>
+#include <stdio.h>
 
 int main(void)
 {
