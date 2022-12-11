@@ -21,9 +21,9 @@ int main(void)
 					continue;
 				if (a == b || a > b)
 					continue;
-				putchar(a);
-				putchar(b);
-				putchar(c);
+				putchar(48 + a);
+				putchar(48 + b);
+				putchar(48 + c);
 				if (a == 7 && b == 8 && c == 9)
 					continue;
 				putchar(',');
