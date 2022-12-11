@@ -21,6 +21,8 @@ int main(void)
 				{
 					if (a == b && a == c && a == d)
 						continue;
+					if(a == c && b == d)
+						continue;
 					if ((c + d) < (a + b))
 						continue;
 					putchar(48 + a);
