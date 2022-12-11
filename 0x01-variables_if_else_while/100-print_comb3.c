@@ -18,6 +18,8 @@ int main(void)
 				continue;
 			putchar(48 + n);
 			putchar(48 + i);
+			if (n == 8 && i == 9)
+				continue;
 			putchar(',');
 			putchar(' ');
 		}
