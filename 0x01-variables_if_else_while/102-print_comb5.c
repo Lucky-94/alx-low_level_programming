@@ -23,7 +23,7 @@ int main(void)
 						continue;
 					if (a == c && b == d)
 						continue;
-					if ((c + d) < (a + b))
+					if ((c * 10  + d) < (a * 10 + b))
 						continue;
 					putchar(48 + a);
 					putchar(48 + b);
