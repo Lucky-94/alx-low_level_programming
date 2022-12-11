@@ -30,7 +30,7 @@ int main(void)
 					putchar(' ');
 					putchar(48 + c);
 					putchar(48 + d);
-					if ((a + b == 17) && (c + d == 18))
+					if (a == 9 && b == 8 && c == 9 && d == 9)
 						continue;
 					putchar(',');
 					putchar(' ');
