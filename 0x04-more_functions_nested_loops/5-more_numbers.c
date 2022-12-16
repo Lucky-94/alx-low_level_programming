@@ -10,8 +10,11 @@ void more_numbers(void)
 	for (int a = 1; a <= 10; a++)
 	{
 		for (int b = 0; b <= 14; b++)
-			_putchar(48 + b);
+		{
+			if (b >= 10)
+				_putchar(48 + b / 10);
+			_putchar(48 + b % 10);
+		}
 		_putchar('\n');
 	}
-	_putchar('\n');
 }
