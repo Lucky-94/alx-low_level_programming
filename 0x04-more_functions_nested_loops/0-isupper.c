@@ -1,16 +1,14 @@
 #include "main.h"
-
-/**
- * main - check the code.
- *
- * Return: Always 0.
+/**                                          *                                           * Return: 1 if input is uppercase, 0 if lowercase.
  */
 
 int main(void)
 {
-	int c = 'a';
-	_putchar(_isupper(c) + 48);
-	c = 'A';
-	_putchar(_isupper(c) + 48);
-	return (0);
+	int _isupper(int c)
+	{
+        	if(c <= 'z' && c >= 'a')
+                	return (0);
+        	else if(c <= 'Z' && c >= 'A')
+                	return (1);
+	}
 }
