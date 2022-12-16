@@ -2,7 +2,6 @@
 
 /**
  * more_numbers - prints 0 to 14 10 times
- * _putchar - prints to stdout
  * Return: 0
  */
 void more_numbers(void)
