@@ -10,27 +10,27 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
-	char *opt;
+	char *o;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	opt = argv[2];
-	if (*opt != '+' && *opt != '-' && *opt != '*' && *opt != '/' && *opt != '%')
+	o = argv[2];
+	if ((*o != '+' && *o != '-' && *o != '*' && *o != '/' && *o != '%') || *(o + 1))
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*opt == '/' && *argv[3] == '0') || (*opt == '%' && *argv[3] == '0'))
+	if ((*o == '/' && *argv[3] == '0') || (*o == '%' && *argv[3] == '0'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	result = (get_op_func(opt))(num1, num2);
+	result = (get_op_func(o))(num1, num2);
 	printf("%d\n", result);
 	return (0);
 }
