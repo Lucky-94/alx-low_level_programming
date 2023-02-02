@@ -46,10 +46,12 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
+
 	while (i < length)
 	{
 		if (b[i] != '1' && b[i] != '0')
 			return (0);
+
 		sum += ((b[i] - 48) * power(2, length - 1 - i));
 		i++;
 	}
