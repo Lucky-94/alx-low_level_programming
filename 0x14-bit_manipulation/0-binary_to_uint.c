@@ -1,14 +1,14 @@
 #include "main.h"
 #include <stddef.h>
 
-int _strlen(const char *s);
+int strlength(const char *s);
 int power(int base, int power);
 /**
- * _strlen-calculates the length of a string
+ * strlength-calculates the length of a string
  * @s: pointer to the string
  * Return: an integer
  */
-int _strlen(const char *s)
+int strlength(const char *s)
 {
 	int i, length = 0;
 
@@ -42,7 +42,7 @@ int power(int base, int exp)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int length = _strlen(b), i = 0, sum = 0;
+	int length = strlength(b), i = 0, sum = 0;
 
 	if (b == NULL)
 		return (0);
