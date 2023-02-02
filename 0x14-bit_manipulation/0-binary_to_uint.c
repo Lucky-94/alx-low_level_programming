@@ -1,59 +1,33 @@
 #include "main.h"
-#include <stddef.h>
 
-int strlength(const char *s);
-int power(int base, int power);
 /**
- * strlength-calculates the length of a string
- * @s: pointer to the string
- * Return: an integer
- */
-int strlength(const char *s)
-{
-	int i, length = 0;
-
-	for (i = 0; s[i]; i++)
-		length += 1;
-	return (length);
-}
-/**
- * power-calculates the exponent of a number
- * @base: base number
- * @exp: power to be raised to
- * Return: integer
- */
-int power(int base, int exp)
-{
-	int i = 1, ans = base;
-
-	if (exp == 0)
-		return (1);
-	while (i < exp)
-	{
-		ans *= base;
-		i++;
-	}
-	return (ans);
-}
-/**
- * binary_to_uint-converts binary to unsigned int
- * @b: pointer to a string of 0s and 1s
- * Return: an unsigned int
+ * binary_to_uint- convert binary to unsigned int
+ * @b: binary
+ * Return: unsigned int
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int length = strlength(b), i = 0, sum = 0;
+
+	int night = 0, j;
+	unsigned int number = 0, non_binary = 0;
 
 	if (b == NULL)
-		return (0);
+		return (non_binary);
 
-	while (i < length)
+	while (b[night] != '\0')
+		night++;
+	night -= 1;
+	j = 0;
+	while (b[j])
 	{
-		if (b[i] != '1' && b[i] != '0')
-			return (0);
+		if ((b[j] != '0') && (b[j] != '1'))/*&& logical AND operator*/
+			return (non_binary);
 
-		sum += ((b[i] - 48) * power(2, length - 1 - i));
-		i++;
+		if (b[j] == '1')
+			number += (1 * (1 << night));/*<< bitwise left shift operator*/
+		j++;
+
+		night--;
 	}
-	return ((unsigned int)sum);
+	return (number);
 }
