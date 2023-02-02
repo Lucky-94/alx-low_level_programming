@@ -30,7 +30,7 @@ int power(int base, int exp)
 		return (1);
 	while (i < exp)
 	{
-		ans = ans * base;
+		ans *= base;
 		i++;
 	}
 	return (ans);
